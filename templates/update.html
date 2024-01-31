@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            padding:5px
+        }
+        form{
+            border: 1px solid black;
+            margin: auto;
+            width: fit-content;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .container button{
+            padding: 5px 20px;
+            border-radius: 10px;
+            color:white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button>update</button>
+    </form>
+    
+</body>
+</html>

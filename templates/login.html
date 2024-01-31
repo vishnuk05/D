@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: fit-content;
+            margin: 50px auto;
+        }
+        form div{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        form div h1{
+            text-align: center;
+        }
+        input{
+            padding: 5px;
+            
+        }
+        body{
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bdd013f9-06fc-4d11-ba50-561df24bb4de/dcs6h1x-c4ceefb8-d570-4966-9a21-a5f8cb4d5d69.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JkZDAxM2Y5LTA2ZmMtNGQxMS1iYTUwLTU2MWRmMjRiYjRkZVwvZGNzNmgxeC1jNGNlZWZiOC1kNTcwLTQ5NjYtOWEyMS1hNWY4Y2I0ZDVkNjkuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.FhdGjbjK61fU_Q6GOchxxeLKhkMl9OsxiwK-wPGfYtA');
+        }
+    </style>
+</head>
+<body>
+    <form action="/validate/" method="POST">
+        {%csrf_token%}
+        <div>
+            <h1>Login</h1>
+        </div>
+        <div class="container">
+            <label for="">username &nbsp;</label> 
+            <input type="text" name="username">
+        </div>
+        <div class="container">
+            <label for="">password &nbsp;</label>
+            <input type="text" name="password">
+        </div>
+        <div class="container">
+            <button>login</button>
+        </div>
+        <div>
+            {{invalid}}
+        </div>
+    </form>
+</body>
+</html>

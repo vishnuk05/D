@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Userlog</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+        img{
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            border: 10px double rgb(136, 127, 127);
+        }
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        div{
+            width: fit-content;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        div button{
+            padding: 10px 25px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+        body{
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bdd013f9-06fc-4d11-ba50-561df24bb4de/dcs6h1x-c4ceefb8-d570-4966-9a21-a5f8cb4d5d69.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JkZDAxM2Y5LTA2ZmMtNGQxMS1iYTUwLTU2MWRmMjRiYjRkZVwvZGNzNmgxeC1jNGNlZWZiOC1kNTcwLTQ5NjYtOWEyMS1hNWY4Y2I0ZDVkNjkuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.FhdGjbjK61fU_Q6GOchxxeLKhkMl9OsxiwK-wPGfYtA');
+        }
+    </style>
+</head>
+
+<body>
+    <h1> welcome {{username}}</h1>
+    <div class="container">
+        <img src="{{ profile.image.url }}" alt="img" >
+    </div>
+    <div>
+        <a href="/userlogout/"><button>LOGOUT</button></a>
+    </div>
+    <div>
+        <a href="{% url 'update' id %}"><button>update</button></a>
+    </div>
+    <div>
+        <a href="{% url 'delete' id %}"><button>delete account</button></a>
+    </div>
+</body>
+
+</html>
